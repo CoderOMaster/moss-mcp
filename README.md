@@ -1,13 +1,13 @@
 # Moss MCP Server
 
-Minimal MCP server for managing Moss indexes using the [Moss REST API](https://docs.usemoss.dev/api-reference/introduction).
+MCP server for managing Moss indexes using the [Moss REST API](https://docs.usemoss.dev/api-reference/introduction).
 
 ## Setup
 
 ### 1. Install
 
 ```bash
-pip install fastmcp httpx
+pip install fastmcp httpx inferedge-moss
 ```
 
 ### 2. Get Credentials
