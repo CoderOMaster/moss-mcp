@@ -45,15 +45,15 @@ MOSS_PROJECT_KEY="your_project_key"
 
 The following tools are exposed by the Moss MCP server:
 
-| Tool | Parameters | Description |
-|------|------------|-------------|
-| `create_index` | `index_name`, `documents`, `model_id?` | Create a new semantic search index. |
-| `get_index` | `index_name` | Retrieve metadata for a specific index. |
-| `list_indexes` | - | List all indexes in the project. |
-| `add_documents` | `index_name`, `documents`, `upsert?` | Add or update documents in an index. |
-| `delete_documents`| `index_name`, `doc_ids` | Remove specific documents by their IDs. |
-| `get_documents` | `index_name`, `doc_ids?` | Retrieve document content and metadata. |
-| `delete_index` | `index_name` | Permanently delete an index. |
+| Tool               | Parameters                             | Description                             |
+| ------------------ | -------------------------------------- | --------------------------------------- |
+| `create_index`     | `index_name`, `documents`, `model_id?` | Create a new semantic search index.     |
+| `get_index`        | `index_name`                           | Retrieve metadata for a specific index. |
+| `list_indexes`     | -                                      | List all indexes in the project.        |
+| `add_documents`    | `index_name`, `documents`, `upsert?`   | Add or update documents in an index.    |
+| `delete_documents` | `index_name`, `doc_ids`                | Remove specific documents by their IDs. |
+| `get_documents`    | `index_name`, `doc_ids?`               | Retrieve document content and metadata. |
+| `delete_index`     | `index_name`                           | Permanently delete an index.            |
 
 ## 💻 Claude Desktop Configuration
 
@@ -85,9 +85,11 @@ Add this to your Claude Desktop configuration file:
 Once configured, you can ask Claude to manage your indexes:
 
 **User Prompt:**
+
 > "Create a new Moss index named 'kb-docs' and add these documents detailing our API guidelines: [docs...]"
 
 **User Prompt:**
+
 > "List all my current Moss indexes and tell me how many documents are in each."
 
 ## ⚡ Note on Semantic Querying
@@ -106,5 +108,9 @@ results = client.query(index_name="kb-docs", text="What is the rate limit?")
 - [Official Documentation](https://docs.usemoss.dev)
 - [Moss Portal](https://portal.usemoss.dev)
 - [GitHub Repository](https://github.com/CoderOMaster/moss-mcp)
+
+## 📝 Technical Case Study
+
+- [Building Voice-Native Semantic Search: Moss MCP + Vapi](./VAPI_BLOG.md) — A deep dive into using Streamable HTTP (shttp) to power real-time voice agents with semantic knowledge.
 
 ---
