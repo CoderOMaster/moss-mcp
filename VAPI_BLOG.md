@@ -44,7 +44,7 @@ graph LR
 
 ### Why shttp over SSE?
 
-During development, we found that traditional **Server-Sent Events (SSE)** often required complex multi-step handshakes (`GET` to open the stream, `POST` to send messages). For voice agents where every millisecond counts, **Streamable HTTP (shttp)** provides a more direct communication path that Vapi handles natively in its modern tool engine.
+During development, we found that traditional **Server-Sent Events (SSE)** often required complex multi-step handshakes (`GET` to open the stream, `POST` to send messages). Vapi follows very complex and specific json rpc format for sse which is not standard and hard to implement due to lack of proper error handling and SSE via vapi has been deprecated giving rise to shttp.
 
 ### Bypassing ngrok Barriers
 
@@ -68,5 +68,5 @@ This isn't just a chatbot; it's a **Voice-Native Knowledge Assistant**.
 Want to build this yourself?
 
 1. Clone the [Moss MCP Repository](https://github.com/CoderOMaster/moss-mcp).
-2. Follow the [Vapi Integration Guide](./walkthrough.md).
+2. Install Ngrok and run `ngrok http 8000`.
 3. Connect your data and start talking to your indexes.
